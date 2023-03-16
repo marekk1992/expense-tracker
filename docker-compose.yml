@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  backend:
+    image: expense-tracker:0.0.1-SNAPSHOT
+    restart: always
+    ports:
+      - '8080:8080'
