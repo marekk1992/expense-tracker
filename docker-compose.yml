@@ -4,5 +4,20 @@ services:
   backend:
     image: expense-tracker:0.0.1-SNAPSHOT
     restart: always
+    depends_on:
+      - db
     ports:
-      - '8080:8080'
+       - '8080:8080'
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres?currentSchema=user_directory
+
+  db:
+    image: postgres:15.1
+    restart: always
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
