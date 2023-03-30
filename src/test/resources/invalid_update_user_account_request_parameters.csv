@@ -1,0 +1,4 @@
+budget, monthlySalary, message
+
+-500, 1000, Budget can`t be negative.
+500, -1000, Monthly salary can`t be negative.

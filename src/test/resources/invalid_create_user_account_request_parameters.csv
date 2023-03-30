@@ -1,0 +1,6 @@
+username, budget, monthlySalary, message
+
+usr, 500, 1000, Username should contain at least 4 characters.
+thisUsernameIsLongerThan20Characters, 500, 1000, Username can`t be longer than 20 characters.
+user1, -500, 1000, Budget can`t be negative.
+user1, 500, -1000, Monthly salary can`t be negative.
